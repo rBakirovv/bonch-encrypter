@@ -38,9 +38,6 @@ def walking_by_dirs(buffer_size, is_encrypt):
         else:
             walking_by_dirs(path, password)
 
-def print_data(path, password, buffer_size):
-    print(path, password, buffer_size)
-
 buffer_size = 512 * 1024
 
 root['bg'] = '#C0C0C0'
