@@ -27,14 +27,10 @@ def walking_by_dirs(buffer_size, is_encrypt):
         path = os.path.join(dir, name)
 
         if os.path.isfile(path):
-            try:
-                if is_encrypt == False:
-                    decryption(path, password, buffer_size)
-                elif is_encrypt == True:
-                    encryption(path, password, buffer_size)
-            except Exception as ex:
-                print(ex)
-
+            if is_encrypt == False:
+                decryption(path, password, buffer_size)
+            elif is_encrypt == True:
+                encryption(path, password, buffer_size)
         else:
             walking_by_dirs(path, password)
 
